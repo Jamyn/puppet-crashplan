@@ -1,4 +1,11 @@
----
+# travis-ci.org - continuous testing environment - http://docs.travis-ci.com/
+
+# build machines are Ubuntu 12.04 x64
+before_install:
+  - sudo apt-get update
+  - sudo apt-get install -y rubygems
+  - sudo gem install bundler
+
 script: "./script/cibuild"
 gemfile: "this/does/not/exist"
 rvm:
